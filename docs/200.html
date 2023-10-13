@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="/LK-Blog-SvelteKit/favicon.svg" sizes="any" type="image/svg+xml" />
+
+		<script>
+			// try to find a localstorage key  if it exists, use it
+			if (localStorage.getItem('LK-theme')) {
+				document.documentElement.setAttribute('data-theme', localStorage.getItem('LK-theme'));
+			}
+			// if no localstorage key exists, use the system preference
+			else {
+				if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.documentElement.setAttribute('data-theme', 'dark');
+				} else {
+					document.documentElement.setAttribute('data-theme', 'light');
+				}
+			}
+		</script>
+		
+		<link rel="modulepreload" href="/LK-Blog-SvelteKit/_app/immutable/entry/start.e89552f8.js">
+		<link rel="modulepreload" href="/LK-Blog-SvelteKit/_app/immutable/chunks/scheduler.3a6d0e3c.js">
+		<link rel="modulepreload" href="/LK-Blog-SvelteKit/_app/immutable/chunks/singletons.5cb0a38d.js">
+		<link rel="modulepreload" href="/LK-Blog-SvelteKit/_app/immutable/entry/app.3eba86e1.js">
+		<link rel="modulepreload" href="/LK-Blog-SvelteKit/_app/immutable/chunks/preload-helper.a4192956.js">
+		<link rel="modulepreload" href="/LK-Blog-SvelteKit/_app/immutable/chunks/index.ae90eb3f.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents" class="svelte">
+			<script>
+				{
+					__sveltekit_1576t27 = {
+						assets: "/LK-Blog-SvelteKit",
+						base: "/LK-Blog-SvelteKit",
+						env: {"PUBLIC_ARTICLE_PATH":"/src/articles"}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/LK-Blog-SvelteKit/_app/immutable/entry/start.e89552f8.js"),
+						import("/LK-Blog-SvelteKit/_app/immutable/entry/app.3eba86e1.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

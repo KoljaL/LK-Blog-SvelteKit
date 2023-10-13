@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./favicon.svg" sizes="any" type="image/svg+xml" />
+
+		<script>
+			// try to find a localstorage key  if it exists, use it
+			if (localStorage.getItem('LK-theme')) {
+				document.documentElement.setAttribute('data-theme', localStorage.getItem('LK-theme'));
+			}
+			// if no localstorage key exists, use the system preference
+			else {
+				if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.documentElement.setAttribute('data-theme', 'dark');
+				} else {
+					document.documentElement.setAttribute('data-theme', 'light');
+				}
+			}
+		</script>
+		
+		<link href="./_app/immutable/assets/0.ae5d1ff1.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/defaultLayout.72d7a429.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Grid.e597423a.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.e89552f8.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.3a6d0e3c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.5cb0a38d.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.3eba86e1.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.a4192956.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.ae90eb3f.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.5120962f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.82cb330a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/utils.fe243f36.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/3.8e839378.js"><title>LK.blog - All about Web Development</title><!-- HEAD_svelte-wdelc7_START --><meta name="description" content="Web development is the art and science of creating websites and web applications that are accessible and functional on the internet."><meta name="author" content="LK"><meta name="news_keywords" content="Code, PHP, Laravel, Svelte, SvelteKit, JavaScript"><meta property="og:title" content="All about Web Development"><meta property="og:site_name" content="LK.blog"><meta property="og:url" content="http://sveltekit-prerender/LK-Blog-SvelteKit/All-about-Web-Development"><meta property="og:description" content="Web development is the art and science of creating websites and web applications that are accessible and functional on the internet."><meta property="og:type" content="article"><meta property="og:locale" content="en_US"><meta property="og:image" content=""><meta property="og:image:type" content="image/jpeg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="http://sveltekit-prerender"><meta name="twitter:creator" content="@LK"><meta name="twitter:title" content="All about Web Development"><meta name="twitter:description" content="Web development is the art and science of creating websites and web applications that are accessible and functional on the internet."><meta name="twitter:image:src" content=""><meta name="twitter:image:alt" content="Web development is the art and science of creating websites and web applications that are accessible and functional on the internet."><meta name="robots" content="max-image-preview:large"><link rel="canonical" href="http://sveltekit-prerender/LK-Blog-SvelteKit/All-about-Web-Development/"><!-- HEAD_svelte-wdelc7_END -->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents" class="svelte">   <header style="--header-height: 4rem; --logo-scale: 0.8" class="svelte-a6bpi5"><a href="/LK-Blog-SvelteKit/" class="logo svelte-a6bpi5" aria-label="Home" title="Home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 266 266"><path d="M 56 42 L 77 42 Q 80 42 80 45 L 80 192 Q 80 195 83 195 L 137 195 Q 140 195 142 197 L 165 220 C 166 221 165 222 164 222 L 56 222 C 54 222 53 221 53 219 L 53 45 C 53 43 54 42 56 42 L 56 42 Z" stroke="#000000" stroke-width="1" fill="#000000"></path><path d="M 86 130 L 172 44 C 173 43 175 42 177 42 L 210 42 C 211 42 212 43 211 44 C 211 44 211 44 211 44 L 125 130 C 124 131 124 133 125 134 L 211 220 C 212 221 211 222 210 222 C 210 222 210 222 210 222 L 177 222 C 174 222 174 222 171 220 L 86 134 C 85 133 85 131 86 130 Z" stroke="#000000" stroke-width="1" fill="#000000"></path><path d="M 132 264 C 59 264 0 205 0 132 C 0 59 59 0 132 0 C 205 0 264 59 264 132 C 264 205 205 264 132 264 Z M 132 258 C 201 258 258 201 258 132 C 258 63 202 6 132 6 C 63 6 6 62 6 132 C 6 201 62 258 132 258 Z" stroke="#000000" stroke-width="1" fill="#000000"></path></svg></a> <div class="title svelte-a6bpi5" data-svelte-h="svelte-dael48">LK.Blog</div> <nav class="nav-wrapper svelte-1egzb1o"><button class="nav-toggle shadow svelte-1egzb1o" aria-expanded="false" aria-haspopup="true" aria-label="Nav toggle">Articles</button>  </nav> </header> <main>     <div class="headerImage svelte-lthmc6"><picture><source srcset="/LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.0d4f74a0.avif 400w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.97d5ec80.avif 600w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.ea477cd1.avif 900w" type="image/avif"><source srcset="/LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.33bb39ee.webp 400w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.c5aad164.webp 600w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.a2c975ac.webp 900w" type="image/webp"> <img src="/LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.a2c975ac.webp" loading="lazy" class=" svelte-1og64i1" decoding="async" draggable="false" width="900" height="505" alt=""></picture></div> <hgroup class="svelte-lthmc6"><h1 class="svelte-lthmc6">All about Web Development</h1> <div class="subheader svelte-lthmc6"><date class="date svelte-lthmc6">September 30, 2023 <span data-svelte-h="svelte-z3qmkf">in</span> <a href="/LK-Blog-SvelteKit/c/Code">Code</a></date> <div class="tags svelte-lthmc6"><a href="/LK-Blog-SvelteKit/t/Code" class="svelte-ynxu2t">#Code</a><a href="/LK-Blog-SvelteKit/t/PHP" class="svelte-ynxu2t">#PHP</a><a href="/LK-Blog-SvelteKit/t/Laravel" class="svelte-ynxu2t">#Laravel</a><a href="/LK-Blog-SvelteKit/t/Svelte" class="svelte-ynxu2t">#Svelte</a><a href="/LK-Blog-SvelteKit/t/SvelteKit" class="svelte-ynxu2t">#SvelteKit</a><a href="/LK-Blog-SvelteKit/t/JavaScript" class="svelte-ynxu2t">#JavaScript</a></div></div></hgroup> <article class="markdown-body svelte-lthmc6">     <p data-svelte-h="svelte-1njg5hy">Web developers use a variety of frameworks, libraries, and tools to streamline their work and build robust web applications. Some popular front-end frameworks include React, Angular, and Vue.js, while back-end development often relies on languages like Python, Ruby, PHP, and Node.js. Databases like MySQL, PostgreSQL, and MongoDB are commonly used to store and manage data.</p> <p data-svelte-h="svelte-kbq6ga">Web development also involves considerations for security, performance optimization, and responsiveness to various devices and screen sizes, as well as compliance with web standards and accessibility guidelines to ensure inclusivity for all users.</p> <p data-svelte-h="svelte-no5m2f">In today’s digital age, web development plays a pivotal role in shaping our online experiences, from e-commerce platforms and social media networks to informative blogs and corporate websites. It continues to evolve with new technologies and trends, making it an exciting and dynamic field for those who are passionate about creating and improving the online world we all rely on.</p> <h2 data-svelte-h="svelte-5jpc2p">HTML example</h2> <pre class="shiki one-dark-pro" style="background-color: #282c34" tabindex="0" data-svelte-h="svelte-12798wz"><code><span class="line"><span style="color: #ABB2BF">&lt;</span><span style="color: #E06C75">nav</span><span style="color: #ABB2BF"> </span><span style="color: #D19A66">class</span><span style="color: #ABB2BF">=</span><span style="color: #98C379">&quot;nav&quot;</span><span style="color: #ABB2BF"> </span><span style="color: #D19A66">role</span><span style="color: #ABB2BF">=</span><span style="color: #98C379">&quot;doc-pagelist&quot;</span><span style="color: #ABB2BF"> </span><span style="color: #D19A66">aria-label</span><span style="color: #ABB2BF">=</span><span style="color: #98C379">&quot;Page list&quot;</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">  &lt;</span><span style="color: #E06C75">ul</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">    &lt;</span><span style="color: #E06C75">li</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">      &lt;</span><span style="color: #E06C75">a</span><span style="color: #ABB2BF"> </span><span style="color: #D19A66">href</span><span style="color: #ABB2BF">=</span><span style="color: #98C379">&quot;#&quot;</span><span style="color: #ABB2BF">&gt;Lorem ipsum dolor&lt;/</span><span style="color: #E06C75">a</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">    &lt;/</span><span style="color: #E06C75">li</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">    &lt;</span><span style="color: #E06C75">li</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">      &lt;</span><span style="color: #E06C75">a</span><span style="color: #ABB2BF"> </span><span style="color: #D19A66">href</span><span style="color: #ABB2BF">=</span><span style="color: #98C379">&quot;#&quot;</span><span style="color: #ABB2BF">&gt;Lorem ipsum dolor&lt;/</span><span style="color: #E06C75">a</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">    &lt;/</span><span style="color: #E06C75">li</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">    &lt;</span><span style="color: #E06C75">li</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">      &lt;</span><span style="color: #E06C75">a</span><span style="color: #ABB2BF"> </span><span style="color: #D19A66">href</span><span style="color: #ABB2BF">=</span><span style="color: #98C379">&quot;#&quot;</span><span style="color: #ABB2BF">&gt;Lorem ipsum dolor&lt;/</span><span style="color: #E06C75">a</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">    &lt;/</span><span style="color: #E06C75">li</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">    &lt;</span><span style="color: #E06C75">li</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">      &lt;</span><span style="color: #E06C75">a</span><span style="color: #ABB2BF"> </span><span style="color: #D19A66">href</span><span style="color: #ABB2BF">=</span><span style="color: #98C379">&quot;#&quot;</span><span style="color: #ABB2BF">&gt;Lorem ipsum dolor&lt;/</span><span style="color: #E06C75">a</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">    &lt;/</span><span style="color: #E06C75">li</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">  &lt;/</span><span style="color: #E06C75">ul</span><span style="color: #ABB2BF">&gt;</span></span>
+<span class="line"><span style="color: #ABB2BF">&lt;/</span><span style="color: #E06C75">nav</span><span style="color: #ABB2BF">&gt;</span></span></code></pre><pre class="shiki github-light" style="background-color: #fff" tabindex="0" data-svelte-h="svelte-10u59pp"><code><span class="line"><span style="color: #24292E">&lt;</span><span style="color: #22863A">nav</span><span style="color: #24292E"> </span><span style="color: #6F42C1">class</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;nav&quot;</span><span style="color: #24292E"> </span><span style="color: #6F42C1">role</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;doc-pagelist&quot;</span><span style="color: #24292E"> </span><span style="color: #6F42C1">aria-label</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;Page list&quot;</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">  &lt;</span><span style="color: #22863A">ul</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;</span><span style="color: #22863A">li</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">      &lt;</span><span style="color: #22863A">a</span><span style="color: #24292E"> </span><span style="color: #6F42C1">href</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;#&quot;</span><span style="color: #24292E">&gt;Lorem ipsum dolor&lt;/</span><span style="color: #22863A">a</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;/</span><span style="color: #22863A">li</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;</span><span style="color: #22863A">li</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">      &lt;</span><span style="color: #22863A">a</span><span style="color: #24292E"> </span><span style="color: #6F42C1">href</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;#&quot;</span><span style="color: #24292E">&gt;Lorem ipsum dolor&lt;/</span><span style="color: #22863A">a</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;/</span><span style="color: #22863A">li</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;</span><span style="color: #22863A">li</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">      &lt;</span><span style="color: #22863A">a</span><span style="color: #24292E"> </span><span style="color: #6F42C1">href</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;#&quot;</span><span style="color: #24292E">&gt;Lorem ipsum dolor&lt;/</span><span style="color: #22863A">a</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;/</span><span style="color: #22863A">li</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;</span><span style="color: #22863A">li</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">      &lt;</span><span style="color: #22863A">a</span><span style="color: #24292E"> </span><span style="color: #6F42C1">href</span><span style="color: #24292E">=</span><span style="color: #032F62">&quot;#&quot;</span><span style="color: #24292E">&gt;Lorem ipsum dolor&lt;/</span><span style="color: #22863A">a</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">    &lt;/</span><span style="color: #22863A">li</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">  &lt;/</span><span style="color: #22863A">ul</span><span style="color: #24292E">&gt;</span></span>
+<span class="line"><span style="color: #24292E">&lt;/</span><span style="color: #22863A">nav</span><span style="color: #24292E">&gt;</span></span></code></pre> <h2 data-svelte-h="svelte-dz16gw">PHP example</h2> <pre class="shiki one-dark-pro" style="background-color: #282c34" tabindex="0" data-svelte-h="svelte-1a86xr4"><code><span class="line highlight-line"><span style="color: #56B6C2">&lt;</span><span style="color: #C678DD">?</span><span style="color: #ABB2BF">php</span></span>
+<span class="line"></span>
+<span class="line highlight-line"><span style="color: #C678DD">namespace</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">App\Console</span><span style="color: #ABB2BF">;</span></span>
+<span class="line highlight-line"></span>
+<span class="line highlight-line"><span style="color: #C678DD">use</span><span style="color: #ABB2BF"> Illuminate\Console\Scheduling\</span><span style="color: #E5C07B">Schedule</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #C678DD">use</span><span style="color: #ABB2BF"> Illuminate\Foundation\Console\</span><span style="color: #E5C07B">Kernel</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">as</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">ConsoleKernel</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"></span>
+<span class="line highlight-line"><span style="color: #C678DD">class</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">Kernel</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">extends</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">ConsoleKernel</span></span>
+<span class="line"><span style="color: #ABB2BF">{</span></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #7F848E; font-style: italic">/**</span></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">     * Define the application&#39;s command schedule.</span></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">     */</span></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #C678DD">protected</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">function</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">schedule</span><span style="color: #ABB2BF">(</span><span style="color: #E5C07B">Schedule</span><span style="color: #ABB2BF"> </span><span style="color: #E06C75">$schedule</span><span style="color: #ABB2BF">): </span><span style="color: #E5C07B">void</span></span>
+<span class="line"><span style="color: #ABB2BF">    {</span></span>
+<span class="line"><span style="color: #ABB2BF">        </span><span style="color: #7F848E; font-style: italic">// $schedule-&gt;command(&#39;inspire&#39;)-&gt;hourly();</span></span>
+<span class="line"><span style="color: #ABB2BF">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #7F848E; font-style: italic">/**</span></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">     * Register the commands for the application.</span></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">     */</span></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #C678DD">protected</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">function</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">commands</span><span style="color: #ABB2BF">(): </span><span style="color: #E5C07B">void</span></span>
+<span class="line"><span style="color: #ABB2BF">    {</span></span>
+<span class="line"><span style="color: #ABB2BF">        </span><span style="color: #E5C07B">$this</span><span style="color: #ABB2BF">-&gt;</span><span style="color: #61AFEF">load</span><span style="color: #ABB2BF">(</span><span style="color: #D19A66">__DIR__</span><span style="color: #ABB2BF">.</span><span style="color: #98C379">&#39;/Commands&#39;</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #ABB2BF">        </span><span style="color: #C678DD">require</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">base_path</span><span style="color: #ABB2BF">(</span><span style="color: #98C379">&#39;routes/console.php&#39;</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">    }</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">// From https://github.com/laravel/laravel/blob/10.x/app/Console/Kernel.php</span></span></code></pre><pre class="shiki github-light" style="background-color: #fff" tabindex="0" data-svelte-h="svelte-11jx2ll"><code><span class="line highlight-line"><span style="color: #D73A49">&lt;?</span><span style="color: #005CC5">php</span></span>
+<span class="line"></span>
+<span class="line highlight-line"><span style="color: #D73A49">namespace</span><span style="color: #24292E"> </span><span style="color: #6F42C1">App\Console</span><span style="color: #24292E">;</span></span>
+<span class="line highlight-line"></span>
+<span class="line highlight-line"><span style="color: #D73A49">use</span><span style="color: #24292E"> </span><span style="color: #005CC5">Illuminate\Console\Scheduling\Schedule</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #D73A49">use</span><span style="color: #24292E"> </span><span style="color: #005CC5">Illuminate\Foundation\Console\Kernel</span><span style="color: #24292E"> </span><span style="color: #D73A49">as</span><span style="color: #24292E"> </span><span style="color: #6F42C1">ConsoleKernel</span><span style="color: #24292E">;</span></span>
+<span class="line"></span>
+<span class="line highlight-line"><span style="color: #D73A49">class</span><span style="color: #24292E"> </span><span style="color: #6F42C1">Kernel</span><span style="color: #24292E"> </span><span style="color: #D73A49">extends</span><span style="color: #24292E"> </span><span style="color: #6F42C1">ConsoleKernel</span></span>
+<span class="line"><span style="color: #24292E">{</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #6A737D">/**</span></span>
+<span class="line"><span style="color: #6A737D">     * Define the application&#39;s command schedule.</span></span>
+<span class="line"><span style="color: #6A737D">     */</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">protected</span><span style="color: #24292E"> </span><span style="color: #D73A49">function</span><span style="color: #24292E"> </span><span style="color: #6F42C1">schedule</span><span style="color: #24292E">(</span><span style="color: #005CC5">Schedule</span><span style="color: #24292E"> $schedule)</span><span style="color: #D73A49">:</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span></span>
+<span class="line"><span style="color: #24292E">    {</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #6A737D">// $schedule-&gt;command(&#39;inspire&#39;)-&gt;hourly();</span></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #6A737D">/**</span></span>
+<span class="line"><span style="color: #6A737D">     * Register the commands for the application.</span></span>
+<span class="line"><span style="color: #6A737D">     */</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #D73A49">protected</span><span style="color: #24292E"> </span><span style="color: #D73A49">function</span><span style="color: #24292E"> </span><span style="color: #6F42C1">commands</span><span style="color: #24292E">()</span><span style="color: #D73A49">:</span><span style="color: #24292E"> </span><span style="color: #D73A49">void</span></span>
+<span class="line"><span style="color: #24292E">    {</span></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #005CC5">$this</span><span style="color: #D73A49">-&gt;</span><span style="color: #6F42C1">load</span><span style="color: #24292E">(</span><span style="color: #005CC5">__DIR__</span><span style="color: #D73A49">.</span><span style="color: #032F62">&#39;/Commands&#39;</span><span style="color: #24292E">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #24292E">        </span><span style="color: #D73A49">require</span><span style="color: #24292E"> </span><span style="color: #6F42C1">base_path</span><span style="color: #24292E">(</span><span style="color: #032F62">&#39;routes/console.php&#39;</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">    }</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// From https://github.com/laravel/laravel/blob/10.x/app/Console/Kernel.php</span></span></code></pre> <h2 data-svelte-h="svelte-r6fn7u">JSON example</h2> <pre class="shiki one-dark-pro" style="background-color: #282c34" tabindex="0" data-svelte-h="svelte-13g83o8"><code><span class="line"><span style="color: #ABB2BF">{</span><span style="color: #E06C75">&quot;name&quot;</span><span style="color: #ABB2BF">: </span><span style="color: #98C379">&quot;Gilbert&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #E06C75">&quot;wins&quot;</span><span style="color: #ABB2BF">: [[</span><span style="color: #98C379">&quot;straight&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #98C379">&quot;7♣&quot;</span><span style="color: #ABB2BF">], [</span><span style="color: #98C379">&quot;one pair&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #98C379">&quot;10♥&quot;</span><span style="color: #ABB2BF">]]}</span></span>
+<span class="line"><span style="color: #ABB2BF">{</span><span style="color: #E06C75">&quot;name&quot;</span><span style="color: #ABB2BF">: </span><span style="color: #98C379">&quot;Alexa&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #E06C75">&quot;wins&quot;</span><span style="color: #ABB2BF">: [[</span><span style="color: #98C379">&quot;two pair&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #98C379">&quot;4♠&quot;</span><span style="color: #ABB2BF">], [</span><span style="color: #98C379">&quot;two pair&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #98C379">&quot;9♠&quot;</span><span style="color: #ABB2BF">]]}</span></span>
+<span class="line"><span style="color: #ABB2BF">{</span><span style="color: #E06C75">&quot;name&quot;</span><span style="color: #ABB2BF">: </span><span style="color: #98C379">&quot;May&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #E06C75">&quot;wins&quot;</span><span style="color: #ABB2BF">: []}</span></span>
+<span class="line"><span style="color: #ABB2BF">{</span><span style="color: #E06C75">&quot;name&quot;</span><span style="color: #ABB2BF">: </span><span style="color: #98C379">&quot;Deloise&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #E06C75">&quot;wins&quot;</span><span style="color: #ABB2BF">: [[</span><span style="color: #98C379">&quot;three of a kind&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #98C379">&quot;5♣&quot;</span><span style="color: #ABB2BF">]]}</span></span>
+<span class="line"><span style="color: #ABB2BF">{</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #E06C75">&quot;name&quot;</span><span style="color: #ABB2BF">: </span><span style="color: #98C379">&quot;Gilbert&quot;</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #E06C75">&quot;wins&quot;</span><span style="color: #ABB2BF">: [</span></span>
+<span class="line"><span style="color: #ABB2BF">    [</span></span>
+<span class="line"><span style="color: #ABB2BF">      </span><span style="color: #98C379">&quot;straight&quot;</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">      </span><span style="color: #98C379">&quot;7♣&quot;</span></span>
+<span class="line"><span style="color: #ABB2BF">    ],</span></span>
+<span class="line"><span style="color: #ABB2BF">    [</span></span>
+<span class="line"><span style="color: #ABB2BF">      </span><span style="color: #98C379">&quot;one pair&quot;</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">      </span><span style="color: #98C379">&quot;10♥&quot;</span></span>
+<span class="line"><span style="color: #ABB2BF">    ]</span></span>
+<span class="line"><span style="color: #ABB2BF">  ]</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"><span style="color: #ABB2BF">{</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #E06C75">&quot;name&quot;</span><span style="color: #ABB2BF">: </span><span style="color: #98C379">&quot;Alexa&quot;</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #E06C75">&quot;wins&quot;</span><span style="color: #ABB2BF">: [</span></span>
+<span class="line"><span style="color: #ABB2BF">    [</span></span>
+<span class="line"><span style="color: #ABB2BF">      </span><span style="color: #98C379">&quot;two pair&quot;</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">      </span><span style="color: #98C379">&quot;4♠&quot;</span></span>
+<span class="line"><span style="color: #ABB2BF">    ],</span></span>
+<span class="line"><span style="color: #ABB2BF">    [</span></span>
+<span class="line"><span style="color: #ABB2BF">      </span><span style="color: #98C379">&quot;two pair&quot;</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">      </span><span style="color: #98C379">&quot;9♠&quot;</span></span>
+<span class="line"><span style="color: #ABB2BF">    ]</span></span>
+<span class="line"><span style="color: #ABB2BF">  ]</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">// From https://jsonlines.org/examples/</span></span></code></pre><pre class="shiki github-light" style="background-color: #fff" tabindex="0" data-svelte-h="svelte-4p3jj9"><code><span class="line"><span style="color: #24292E">{</span><span style="color: #005CC5">&quot;name&quot;</span><span style="color: #24292E">: </span><span style="color: #032F62">&quot;Gilbert&quot;</span><span style="color: #24292E">, </span><span style="color: #005CC5">&quot;wins&quot;</span><span style="color: #24292E">: [[</span><span style="color: #032F62">&quot;straight&quot;</span><span style="color: #24292E">, </span><span style="color: #032F62">&quot;7♣&quot;</span><span style="color: #24292E">], [</span><span style="color: #032F62">&quot;one pair&quot;</span><span style="color: #24292E">, </span><span style="color: #032F62">&quot;10♥&quot;</span><span style="color: #24292E">]]}</span></span>
+<span class="line"><span style="color: #24292E">{</span><span style="color: #005CC5">&quot;name&quot;</span><span style="color: #24292E">: </span><span style="color: #032F62">&quot;Alexa&quot;</span><span style="color: #24292E">, </span><span style="color: #005CC5">&quot;wins&quot;</span><span style="color: #24292E">: [[</span><span style="color: #032F62">&quot;two pair&quot;</span><span style="color: #24292E">, </span><span style="color: #032F62">&quot;4♠&quot;</span><span style="color: #24292E">], [</span><span style="color: #032F62">&quot;two pair&quot;</span><span style="color: #24292E">, </span><span style="color: #032F62">&quot;9♠&quot;</span><span style="color: #24292E">]]}</span></span>
+<span class="line"><span style="color: #24292E">{</span><span style="color: #005CC5">&quot;name&quot;</span><span style="color: #24292E">: </span><span style="color: #032F62">&quot;May&quot;</span><span style="color: #24292E">, </span><span style="color: #005CC5">&quot;wins&quot;</span><span style="color: #24292E">: []}</span></span>
+<span class="line"><span style="color: #24292E">{</span><span style="color: #005CC5">&quot;name&quot;</span><span style="color: #24292E">: </span><span style="color: #032F62">&quot;Deloise&quot;</span><span style="color: #24292E">, </span><span style="color: #005CC5">&quot;wins&quot;</span><span style="color: #24292E">: [[</span><span style="color: #032F62">&quot;three of a kind&quot;</span><span style="color: #24292E">, </span><span style="color: #032F62">&quot;5♣&quot;</span><span style="color: #24292E">]]}</span></span>
+<span class="line"><span style="color: #24292E">{</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">&quot;name&quot;</span><span style="color: #24292E">: </span><span style="color: #032F62">&quot;Gilbert&quot;</span><span style="color: #24292E">,</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">&quot;wins&quot;</span><span style="color: #24292E">: [</span></span>
+<span class="line"><span style="color: #24292E">    [</span></span>
+<span class="line"><span style="color: #24292E">      </span><span style="color: #032F62">&quot;straight&quot;</span><span style="color: #24292E">,</span></span>
+<span class="line"><span style="color: #24292E">      </span><span style="color: #032F62">&quot;7♣&quot;</span></span>
+<span class="line"><span style="color: #24292E">    ],</span></span>
+<span class="line"><span style="color: #24292E">    [</span></span>
+<span class="line"><span style="color: #24292E">      </span><span style="color: #032F62">&quot;one pair&quot;</span><span style="color: #24292E">,</span></span>
+<span class="line"><span style="color: #24292E">      </span><span style="color: #032F62">&quot;10♥&quot;</span></span>
+<span class="line"><span style="color: #24292E">    ]</span></span>
+<span class="line"><span style="color: #24292E">  ]</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"><span style="color: #24292E">{</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">&quot;name&quot;</span><span style="color: #24292E">: </span><span style="color: #032F62">&quot;Alexa&quot;</span><span style="color: #24292E">,</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">&quot;wins&quot;</span><span style="color: #24292E">: [</span></span>
+<span class="line"><span style="color: #24292E">    [</span></span>
+<span class="line"><span style="color: #24292E">      </span><span style="color: #032F62">&quot;two pair&quot;</span><span style="color: #24292E">,</span></span>
+<span class="line"><span style="color: #24292E">      </span><span style="color: #032F62">&quot;4♠&quot;</span></span>
+<span class="line"><span style="color: #24292E">    ],</span></span>
+<span class="line"><span style="color: #24292E">    [</span></span>
+<span class="line"><span style="color: #24292E">      </span><span style="color: #032F62">&quot;two pair&quot;</span><span style="color: #24292E">,</span></span>
+<span class="line"><span style="color: #24292E">      </span><span style="color: #032F62">&quot;9♠&quot;</span></span>
+<span class="line"><span style="color: #24292E">    ]</span></span>
+<span class="line"><span style="color: #24292E">  ]</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"><span style="color: #6A737D">// From https://jsonlines.org/examples/</span></span></code></pre> <h2 data-svelte-h="svelte-1kdrf8t">CSS example</h2> <pre class="shiki one-dark-pro" style="background-color: #282c34" tabindex="0" data-svelte-h="svelte-16vmcfs"><code><span class="line"><span style="color: #E06C75">html</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">	margin: </span><span style="color: #D19A66">0</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">	background: </span><span style="color: #D19A66">black</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">	height: </span><span style="color: #D19A66">100</span><span style="color: #E06C75">%</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E06C75">body</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">	margin: </span><span style="color: #D19A66">0</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">	width: </span><span style="color: #D19A66">100</span><span style="color: #E06C75">%</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">	height: </span><span style="color: #D19A66">inherit</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">/* the three main rows going down the page */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #E06C75">body</span><span style="color: #C678DD"> </span><span style="color: #ABB2BF">&gt;</span><span style="color: #C678DD"> </span><span style="color: #E06C75">div</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">  height: </span><span style="color: #D19A66">25</span><span style="color: #E06C75">%</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D19A66">.thumb</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">	float: </span><span style="color: #D19A66">left</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">	width: </span><span style="color: #D19A66">25</span><span style="color: #E06C75">%</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">	height: </span><span style="color: #D19A66">100</span><span style="color: #E06C75">%</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">	object-fit: </span><span style="color: #D19A66">cover</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D19A66">.main</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">  display: </span><span style="color: #D19A66">none</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D19A66">.blowup</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">  display: </span><span style="color: #D19A66">block</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">  position: </span><span style="color: #D19A66">absolute</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">  object-fit: </span><span style="color: #D19A66">contain</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">  object-position: </span><span style="color: #D19A66">center</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">  top: </span><span style="color: #D19A66">0</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">  left: </span><span style="color: #D19A66">0</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">  width: </span><span style="color: #D19A66">100</span><span style="color: #E06C75">%</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">  height: </span><span style="color: #D19A66">100</span><span style="color: #E06C75">%</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">  z-index: </span><span style="color: #D19A66">2000</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D19A66">.darken</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">  opacity: </span><span style="color: #D19A66">0.4</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">/* From https://github.com/mdn/css-examples/blob/main/object-fit-gallery/style.css */</span></span>
+<span class="line"></span></code></pre><pre class="shiki github-light" style="background-color: #fff" tabindex="0" data-svelte-h="svelte-2503i0"><code><span class="line"><span style="color: #22863A">html</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">	</span><span style="color: #005CC5">margin</span><span style="color: #24292E">: </span><span style="color: #005CC5">0</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">	</span><span style="color: #005CC5">background</span><span style="color: #24292E">: </span><span style="color: #005CC5">black</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">	</span><span style="color: #005CC5">height</span><span style="color: #24292E">: </span><span style="color: #005CC5">100</span><span style="color: #D73A49">%</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #22863A">body</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">	</span><span style="color: #005CC5">margin</span><span style="color: #24292E">: </span><span style="color: #005CC5">0</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">	</span><span style="color: #005CC5">width</span><span style="color: #24292E">: </span><span style="color: #005CC5">100</span><span style="color: #D73A49">%</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">	</span><span style="color: #005CC5">height</span><span style="color: #24292E">: </span><span style="color: #005CC5">inherit</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">/* the three main rows going down the page */</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #22863A">body</span><span style="color: #24292E"> </span><span style="color: #D73A49">&gt;</span><span style="color: #24292E"> </span><span style="color: #22863A">div</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">height</span><span style="color: #24292E">: </span><span style="color: #005CC5">25</span><span style="color: #D73A49">%</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6F42C1">.thumb</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">	</span><span style="color: #005CC5">float</span><span style="color: #24292E">: </span><span style="color: #005CC5">left</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">	</span><span style="color: #005CC5">width</span><span style="color: #24292E">: </span><span style="color: #005CC5">25</span><span style="color: #D73A49">%</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">	</span><span style="color: #005CC5">height</span><span style="color: #24292E">: </span><span style="color: #005CC5">100</span><span style="color: #D73A49">%</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">	</span><span style="color: #005CC5">object-fit</span><span style="color: #24292E">: </span><span style="color: #005CC5">cover</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6F42C1">.main</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">display</span><span style="color: #24292E">: </span><span style="color: #005CC5">none</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6F42C1">.blowup</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">display</span><span style="color: #24292E">: </span><span style="color: #005CC5">block</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">position</span><span style="color: #24292E">: </span><span style="color: #005CC5">absolute</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">object-fit</span><span style="color: #24292E">: </span><span style="color: #005CC5">contain</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">object-position</span><span style="color: #24292E">: </span><span style="color: #005CC5">center</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">top</span><span style="color: #24292E">: </span><span style="color: #005CC5">0</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">left</span><span style="color: #24292E">: </span><span style="color: #005CC5">0</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">width</span><span style="color: #24292E">: </span><span style="color: #005CC5">100</span><span style="color: #D73A49">%</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">height</span><span style="color: #24292E">: </span><span style="color: #005CC5">100</span><span style="color: #D73A49">%</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">z-index</span><span style="color: #24292E">: </span><span style="color: #005CC5">2000</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6F42C1">.darken</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">opacity</span><span style="color: #24292E">: </span><span style="color: #005CC5">0.4</span><span style="color: #24292E">;</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">/* From https://github.com/mdn/css-examples/blob/main/object-fit-gallery/style.css */</span></span>
+<span class="line"></span></code></pre> <h2 data-svelte-h="svelte-1j2mybv">JavaScript example</h2> <pre class="shiki one-dark-pro" style="background-color: #282c34" tabindex="0" data-svelte-h="svelte-1ffj4c"><code><span class="line"><span style="color: #C678DD">function</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">resolveAfter2Seconds</span><span style="color: #ABB2BF">(</span><span style="color: #E06C75; font-style: italic">x</span><span style="color: #ABB2BF">) {</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #C678DD">return</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">new</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">Promise</span><span style="color: #ABB2BF">((</span><span style="color: #E06C75; font-style: italic">resolve</span><span style="color: #ABB2BF">) </span><span style="color: #C678DD">=&gt;</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #61AFEF">setTimeout</span><span style="color: #ABB2BF">(() </span><span style="color: #C678DD">=&gt;</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">      </span><span style="color: #61AFEF">resolve</span><span style="color: #ABB2BF">(</span><span style="color: #E06C75">x</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">    }, </span><span style="color: #D19A66">2000</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">  });</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">// async function expression assigned to a variable</span></span>
+<span class="line"><span style="color: #C678DD">const</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">add</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">=</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">async</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">function</span><span style="color: #ABB2BF"> (</span><span style="color: #E06C75; font-style: italic">x</span><span style="color: #ABB2BF">) {</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #C678DD">const</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">a</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">=</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">await</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">resolveAfter2Seconds</span><span style="color: #ABB2BF">(</span><span style="color: #D19A66">20</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #C678DD">const</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">b</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">=</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">await</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">resolveAfter2Seconds</span><span style="color: #ABB2BF">(</span><span style="color: #D19A66">30</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #C678DD">return</span><span style="color: #ABB2BF"> </span><span style="color: #E06C75">x</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">+</span><span style="color: #ABB2BF"> </span><span style="color: #E06C75">a</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">+</span><span style="color: #ABB2BF"> </span><span style="color: #E06C75">b</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"><span style="color: #ABB2BF">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #61AFEF">add</span><span style="color: #ABB2BF">(</span><span style="color: #D19A66">10</span><span style="color: #ABB2BF">).</span><span style="color: #61AFEF">then</span><span style="color: #ABB2BF">((</span><span style="color: #E06C75; font-style: italic">v</span><span style="color: #ABB2BF">) </span><span style="color: #C678DD">=&gt;</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #E5C07B">console</span><span style="color: #ABB2BF">.</span><span style="color: #61AFEF">log</span><span style="color: #ABB2BF">(</span><span style="color: #E06C75">v</span><span style="color: #ABB2BF">); </span><span style="color: #7F848E; font-style: italic">// prints 60 after 4 seconds.</span></span>
+<span class="line"><span style="color: #ABB2BF">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">// async function expression used as an IIFE</span></span>
+<span class="line"><span style="color: #ABB2BF">(</span><span style="color: #C678DD">async</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">function</span><span style="color: #ABB2BF"> (</span><span style="color: #E06C75; font-style: italic">x</span><span style="color: #ABB2BF">) {</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #C678DD">const</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">p1</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">=</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">resolveAfter2Seconds</span><span style="color: #ABB2BF">(</span><span style="color: #D19A66">20</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #C678DD">const</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">p2</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">=</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">resolveAfter2Seconds</span><span style="color: #ABB2BF">(</span><span style="color: #D19A66">30</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #C678DD">return</span><span style="color: #ABB2BF"> </span><span style="color: #E06C75">x</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">+</span><span style="color: #ABB2BF"> (</span><span style="color: #C678DD">await</span><span style="color: #ABB2BF"> </span><span style="color: #E06C75">p1</span><span style="color: #ABB2BF">) </span><span style="color: #56B6C2">+</span><span style="color: #ABB2BF"> (</span><span style="color: #C678DD">await</span><span style="color: #ABB2BF"> </span><span style="color: #E06C75">p2</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">})(</span><span style="color: #D19A66">10</span><span style="color: #ABB2BF">).</span><span style="color: #61AFEF">then</span><span style="color: #ABB2BF">((</span><span style="color: #E06C75; font-style: italic">v</span><span style="color: #ABB2BF">) </span><span style="color: #C678DD">=&gt;</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #E5C07B">console</span><span style="color: #ABB2BF">.</span><span style="color: #61AFEF">log</span><span style="color: #ABB2BF">(</span><span style="color: #E06C75">v</span><span style="color: #ABB2BF">); </span><span style="color: #7F848E; font-style: italic">// prints 60 after 2 seconds.</span></span>
+<span class="line"><span style="color: #ABB2BF">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function</span></span>
+<span class="line"></span></code></pre><pre class="shiki github-light" style="background-color: #fff" tabindex="0" data-svelte-h="svelte-19fusnr"><code><span class="line"><span style="color: #D73A49">function</span><span style="color: #24292E"> </span><span style="color: #6F42C1">resolveAfter2Seconds</span><span style="color: #24292E">(</span><span style="color: #E36209">x</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #D73A49">return</span><span style="color: #24292E"> </span><span style="color: #D73A49">new</span><span style="color: #24292E"> </span><span style="color: #005CC5">Promise</span><span style="color: #24292E">((</span><span style="color: #E36209">resolve</span><span style="color: #24292E">) </span><span style="color: #D73A49">=&gt;</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">    </span><span style="color: #6F42C1">setTimeout</span><span style="color: #24292E">(() </span><span style="color: #D73A49">=&gt;</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">      </span><span style="color: #6F42C1">resolve</span><span style="color: #24292E">(x);</span></span>
+<span class="line"><span style="color: #24292E">    }, </span><span style="color: #005CC5">2000</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">  });</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// async function expression assigned to a variable</span></span>
+<span class="line"><span style="color: #D73A49">const</span><span style="color: #24292E"> </span><span style="color: #6F42C1">add</span><span style="color: #24292E"> </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">async</span><span style="color: #24292E"> </span><span style="color: #D73A49">function</span><span style="color: #24292E"> (</span><span style="color: #E36209">x</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #D73A49">const</span><span style="color: #24292E"> </span><span style="color: #005CC5">a</span><span style="color: #24292E"> </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">await</span><span style="color: #24292E"> </span><span style="color: #6F42C1">resolveAfter2Seconds</span><span style="color: #24292E">(</span><span style="color: #005CC5">20</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #D73A49">const</span><span style="color: #24292E"> </span><span style="color: #005CC5">b</span><span style="color: #24292E"> </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">await</span><span style="color: #24292E"> </span><span style="color: #6F42C1">resolveAfter2Seconds</span><span style="color: #24292E">(</span><span style="color: #005CC5">30</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #D73A49">return</span><span style="color: #24292E"> x </span><span style="color: #D73A49">+</span><span style="color: #24292E"> a </span><span style="color: #D73A49">+</span><span style="color: #24292E"> b;</span></span>
+<span class="line"><span style="color: #24292E">};</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6F42C1">add</span><span style="color: #24292E">(</span><span style="color: #005CC5">10</span><span style="color: #24292E">).</span><span style="color: #6F42C1">then</span><span style="color: #24292E">((</span><span style="color: #E36209">v</span><span style="color: #24292E">) </span><span style="color: #D73A49">=&gt;</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">  console.</span><span style="color: #6F42C1">log</span><span style="color: #24292E">(v); </span><span style="color: #6A737D">// prints 60 after 4 seconds.</span></span>
+<span class="line"><span style="color: #24292E">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// async function expression used as an IIFE</span></span>
+<span class="line"><span style="color: #24292E">(</span><span style="color: #D73A49">async</span><span style="color: #24292E"> </span><span style="color: #D73A49">function</span><span style="color: #24292E"> (</span><span style="color: #E36209">x</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #D73A49">const</span><span style="color: #24292E"> </span><span style="color: #005CC5">p1</span><span style="color: #24292E"> </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #6F42C1">resolveAfter2Seconds</span><span style="color: #24292E">(</span><span style="color: #005CC5">20</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #D73A49">const</span><span style="color: #24292E"> </span><span style="color: #005CC5">p2</span><span style="color: #24292E"> </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #6F42C1">resolveAfter2Seconds</span><span style="color: #24292E">(</span><span style="color: #005CC5">30</span><span style="color: #24292E">);</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #D73A49">return</span><span style="color: #24292E"> x </span><span style="color: #D73A49">+</span><span style="color: #24292E"> (</span><span style="color: #D73A49">await</span><span style="color: #24292E"> p1) </span><span style="color: #D73A49">+</span><span style="color: #24292E"> (</span><span style="color: #D73A49">await</span><span style="color: #24292E"> p2);</span></span>
+<span class="line"><span style="color: #24292E">})(</span><span style="color: #005CC5">10</span><span style="color: #24292E">).</span><span style="color: #6F42C1">then</span><span style="color: #24292E">((</span><span style="color: #E36209">v</span><span style="color: #24292E">) </span><span style="color: #D73A49">=&gt;</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">  console.</span><span style="color: #6F42C1">log</span><span style="color: #24292E">(v); </span><span style="color: #6A737D">// prints 60 after 2 seconds.</span></span>
+<span class="line"><span style="color: #24292E">});</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// From https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/async_function</span></span>
+<span class="line"></span></code></pre> <pre class="shiki one-dark-pro" style="background-color: #282c34" tabindex="0" data-svelte-h="svelte-12hg1cf"><code><span class="line"><span style="color: #C678DD">enum</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">LogLevel</span><span style="color: #ABB2BF"> {</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #E06C75">ERROR</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #E06C75">WARN</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #E06C75">INFO</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #E06C75">DEBUG</span><span style="color: #ABB2BF">,</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">/**</span></span>
+<span class="line"><span style="color: #7F848E; font-style: italic"> * This is equivalent to:</span></span>
+<span class="line"><span style="color: #7F848E; font-style: italic"> * type LogLevelStrings = &#39;ERROR&#39; | &#39;WARN&#39; | &#39;INFO&#39; | &#39;DEBUG&#39;;</span></span>
+<span class="line"><span style="color: #7F848E; font-style: italic"> */</span></span>
+<span class="line"><span style="color: #C678DD">type</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">LogLevelStrings</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">=</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">keyof</span><span style="color: #ABB2BF"> </span><span style="color: #C678DD">typeof</span><span style="color: #ABB2BF"> </span><span style="color: #E06C75">LogLevel</span><span style="color: #ABB2BF">;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #C678DD">function</span><span style="color: #ABB2BF"> </span><span style="color: #61AFEF">printImportant</span><span style="color: #ABB2BF">(</span><span style="color: #E06C75; font-style: italic">key</span><span style="color: #ABB2BF">: </span><span style="color: #E5C07B">LogLevelStrings</span><span style="color: #ABB2BF">, </span><span style="color: #E06C75; font-style: italic">message</span><span style="color: #ABB2BF">: </span><span style="color: #E5C07B">string</span><span style="color: #ABB2BF">) {</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #C678DD">const</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">num</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">=</span><span style="color: #ABB2BF"> </span><span style="color: #E06C75">LogLevel</span><span style="color: #ABB2BF">[</span><span style="color: #E06C75">key</span><span style="color: #ABB2BF">];</span></span>
+<span class="line"><span style="color: #ABB2BF">  </span><span style="color: #C678DD">if</span><span style="color: #ABB2BF"> (</span><span style="color: #E06C75">num</span><span style="color: #ABB2BF"> </span><span style="color: #56B6C2">&lt;=</span><span style="color: #ABB2BF"> </span><span style="color: #E5C07B">LogLevel</span><span style="color: #ABB2BF">.</span><span style="color: #E06C75">WARN</span><span style="color: #ABB2BF">) {</span></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">console</span><span style="color: #ABB2BF">.</span><span style="color: #61AFEF">log</span><span style="color: #ABB2BF">(</span><span style="color: #98C379">&quot;Log level key is:&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #E06C75">key</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">console</span><span style="color: #ABB2BF">.</span><span style="color: #61AFEF">log</span><span style="color: #ABB2BF">(</span><span style="color: #98C379">&quot;Log level value is:&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #E06C75">num</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">    </span><span style="color: #E5C07B">console</span><span style="color: #ABB2BF">.</span><span style="color: #61AFEF">log</span><span style="color: #ABB2BF">(</span><span style="color: #98C379">&quot;Log level message is:&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #E06C75">message</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"><span style="color: #ABB2BF">  }</span></span>
+<span class="line"><span style="color: #ABB2BF">}</span></span>
+<span class="line"><span style="color: #61AFEF">printImportant</span><span style="color: #ABB2BF">(</span><span style="color: #98C379">&quot;ERROR&quot;</span><span style="color: #ABB2BF">, </span><span style="color: #98C379">&quot;This is a message&quot;</span><span style="color: #ABB2BF">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #7F848E; font-style: italic">// From https://www.typescriptlang.org/docs/handbook/enums.html</span></span>
+<span class="line"></span></code></pre><pre class="shiki github-light" style="background-color: #fff" tabindex="0" data-svelte-h="svelte-1fvg21c"><code><span class="line"><span style="color: #D73A49">enum</span><span style="color: #24292E"> </span><span style="color: #6F42C1">LogLevel</span><span style="color: #24292E"> {</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">ERROR</span><span style="color: #24292E">,</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">WARN</span><span style="color: #24292E">,</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">INFO</span><span style="color: #24292E">,</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #005CC5">DEBUG</span><span style="color: #24292E">,</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">/**</span></span>
+<span class="line"><span style="color: #6A737D"> * This is equivalent to:</span></span>
+<span class="line"><span style="color: #6A737D"> * type LogLevelStrings = &#39;ERROR&#39; | &#39;WARN&#39; | &#39;INFO&#39; | &#39;DEBUG&#39;;</span></span>
+<span class="line"><span style="color: #6A737D"> */</span></span>
+<span class="line"><span style="color: #D73A49">type</span><span style="color: #24292E"> </span><span style="color: #6F42C1">LogLevelStrings</span><span style="color: #24292E"> </span><span style="color: #D73A49">=</span><span style="color: #24292E"> </span><span style="color: #D73A49">keyof</span><span style="color: #24292E"> </span><span style="color: #D73A49">typeof</span><span style="color: #24292E"> LogLevel;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #D73A49">function</span><span style="color: #24292E"> </span><span style="color: #6F42C1">printImportant</span><span style="color: #24292E">(</span><span style="color: #E36209">key</span><span style="color: #D73A49">:</span><span style="color: #24292E"> </span><span style="color: #6F42C1">LogLevelStrings</span><span style="color: #24292E">, </span><span style="color: #E36209">message</span><span style="color: #D73A49">:</span><span style="color: #24292E"> </span><span style="color: #005CC5">string</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #D73A49">const</span><span style="color: #24292E"> </span><span style="color: #005CC5">num</span><span style="color: #24292E"> </span><span style="color: #D73A49">=</span><span style="color: #24292E"> LogLevel[key];</span></span>
+<span class="line"><span style="color: #24292E">  </span><span style="color: #D73A49">if</span><span style="color: #24292E"> (num </span><span style="color: #D73A49">&lt;=</span><span style="color: #24292E"> LogLevel.</span><span style="color: #005CC5">WARN</span><span style="color: #24292E">) {</span></span>
+<span class="line"><span style="color: #24292E">    console.</span><span style="color: #6F42C1">log</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;Log level key is:&quot;</span><span style="color: #24292E">, key);</span></span>
+<span class="line"><span style="color: #24292E">    console.</span><span style="color: #6F42C1">log</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;Log level value is:&quot;</span><span style="color: #24292E">, num);</span></span>
+<span class="line"><span style="color: #24292E">    console.</span><span style="color: #6F42C1">log</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;Log level message is:&quot;</span><span style="color: #24292E">, message);</span></span>
+<span class="line"><span style="color: #24292E">  }</span></span>
+<span class="line"><span style="color: #24292E">}</span></span>
+<span class="line"><span style="color: #6F42C1">printImportant</span><span style="color: #24292E">(</span><span style="color: #032F62">&quot;ERROR&quot;</span><span style="color: #24292E">, </span><span style="color: #032F62">&quot;This is a message&quot;</span><span style="color: #24292E">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color: #6A737D">// From https://www.typescriptlang.org/docs/handbook/enums.html</span></span>
+<span class="line"></span></code></pre></article> <div class="GridOfCardsTitle svelte-lthmc6" data-svelte-h="svelte-g27nsy">Related Articles in the same category
+	 </div>    <h2 class="svelte-gd11pg">2023-09</h2> <section class="card_wrapper svelte-gd11pg"><div class="card shadow svelte-vugzlm"><h3 class="card_title svelte-vugzlm"><a href="/LK-Blog-SvelteKit/All-about-Web-Development">All about Web Development</a></h3> <div class="card_meta svelte-vugzlm"><div class="card_date svelte-vugzlm">September 30, 2023</div> <div class="card_category svelte-vugzlm">in<a href="/LK-Blog-SvelteKit/c/Code"> Code</a></div> </div> <p class="card_content svelte-vugzlm">Web development is the art and science of creating websites and web applications that are accessible and functional on the internet. It encompasses a wide range of skills and technologies, making it a dynamic and constantly evolving field.</p>  <div class="card_image_wrapper svelte-vugzlm"><picture><source srcset="/LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.0d4f74a0.avif 400w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.97d5ec80.avif 600w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.ea477cd1.avif 900w" type="image/avif"><source srcset="/LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.33bb39ee.webp 400w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.c5aad164.webp 600w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.a2c975ac.webp 900w" type="image/webp"> <img src="/LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.a2c975ac.webp" loading="lazy" class="card_image svelte-1og64i1" decoding="async" draggable="false" width="900" height="505" alt=""></picture></div>  </div> </section><h2 class="svelte-gd11pg">2023-04</h2> <section class="card_wrapper svelte-gd11pg"><div class="card shadow svelte-vugzlm"><h3 class="card_title svelte-vugzlm"><a href="/LK-Blog-SvelteKit/HTML-the-language-of-the-web">HTML the language of the web</a></h3> <div class="card_meta svelte-vugzlm"><div class="card_date svelte-vugzlm">April 12, 2023</div> <div class="card_category svelte-vugzlm">in<a href="/LK-Blog-SvelteKit/c/Code"> Code</a></div> </div> <p class="card_content svelte-vugzlm">HTML is the language of the web. It is the foundation of every website and web application, and it is used to structure and present content on the internet. HTML stands for HyperText Markup Language, which means that it is a markup language that uses hypertext to link documents together.</p>  <div class="card_image_wrapper svelte-vugzlm"><picture><source srcset="/LK-Blog-SvelteKit/_app/immutable/assets/HTML-Title.c8a90a60.avif 400w, /LK-Blog-SvelteKit/_app/immutable/assets/HTML-Title.722b131e.avif 600w, /LK-Blog-SvelteKit/_app/immutable/assets/HTML-Title.f2be81f2.avif 900w" type="image/avif"><source srcset="/LK-Blog-SvelteKit/_app/immutable/assets/HTML-Title.5a8624f1.webp 400w, /LK-Blog-SvelteKit/_app/immutable/assets/HTML-Title.cfe92e88.webp 600w, /LK-Blog-SvelteKit/_app/immutable/assets/HTML-Title.d04bd09a.webp 900w" type="image/webp"> <img src="/LK-Blog-SvelteKit/_app/immutable/assets/HTML-Title.d04bd09a.webp" loading="lazy" class="card_image svelte-1og64i1" decoding="async" draggable="false" width="900" height="600" alt=""></picture></div>  </div> </section><h2 class="svelte-gd11pg">2023-02</h2> <section class="card_wrapper svelte-gd11pg"><div class="card shadow svelte-vugzlm"><h3 class="card_title svelte-vugzlm"><a href="/LK-Blog-SvelteKit/Laravel-Web-Development-for-Beginners">Laravel Web Development for Beginners</a></h3> <div class="card_meta svelte-vugzlm"><div class="card_date svelte-vugzlm">February 22, 2023</div> <div class="card_category svelte-vugzlm">in<a href="/LK-Blog-SvelteKit/c/Code"> Code</a></div> </div> <p class="card_content svelte-vugzlm">Laravel is a web application framework with expressive, elegant syntax. A web framework provides a structure and starting point for creating your application, allowing you to focus on creating something amazing while we sweat the details.</p>  <div class="card_image_wrapper svelte-vugzlm"><picture><source srcset="/LK-Blog-SvelteKit/_app/immutable/assets/Laravel-Title.1eae4962.avif 400w, /LK-Blog-SvelteKit/_app/immutable/assets/Laravel-Title.d77bc949.avif 600w, /LK-Blog-SvelteKit/_app/immutable/assets/Laravel-Title.b9551b68.avif 900w" type="image/avif"><source srcset="/LK-Blog-SvelteKit/_app/immutable/assets/Laravel-Title.7c879984.webp 400w, /LK-Blog-SvelteKit/_app/immutable/assets/Laravel-Title.37378cb0.webp 600w, /LK-Blog-SvelteKit/_app/immutable/assets/Laravel-Title.894bd6b7.webp 900w" type="image/webp"> <img src="/LK-Blog-SvelteKit/_app/immutable/assets/Laravel-Title.894bd6b7.webp" loading="lazy" class="card_image svelte-1og64i1" decoding="async" draggable="false" width="900" height="551" alt=""></picture></div>  </div> </section></main> <footer class="svelte-1r6kx16"><span class="theme_toggle svelte-1r6kx16"><button class="theme-toggle-wrapper svelte-rhe2td" data-svelte-h="svelte-4goppp"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="2rem" height="2rem" fill="currentColor" stroke-linecap="round" class="sun_to_moon theme-toggle svelte-rhe2td" viewBox="0 0 32 32"><clipPath id="sun_to_moon__cutout"><path d="M0-5h30a1 1 0 0 0 9 13v24H0Z" class="svelte-rhe2td"></path></clipPath><g clip-path="url(#sun_to_moon__cutout)"><circle cx="16" cy="16" r="9.34"></circle><g stroke="currentColor" stroke-width="1.5"><path d="M16 5.5v-4" class="svelte-rhe2td"></path><path d="M16 30.5v-4" class="svelte-rhe2td"></path><path d="M1.5 16h4" class="svelte-rhe2td"></path><path d="M26.5 16h4" class="svelte-rhe2td"></path><path d="m23.4 8.6 2.8-2.8" class="svelte-rhe2td"></path><path d="m5.7 26.3 2.9-2.9" class="svelte-rhe2td"></path><path d="m5.8 5.8 2.8 2.8" class="svelte-rhe2td"></path><path d="m23.4 23.4 2.9 2.9" class="svelte-rhe2td"></path></g></g></svg> </button></span> <span data-svelte-h="svelte-14wg5gd">Footer</span>   </footer>  
+			
+			<script>
+				{
+					__sveltekit_1576t27 = {
+						assets: "/LK-Blog-SvelteKit",
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {"PUBLIC_ARTICLE_PATH":"/src/articles"}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.e89552f8.js"),
+						import("./_app/immutable/entry/app.3eba86e1.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

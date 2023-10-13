@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="../favicon.svg" sizes="any" type="image/svg+xml" />
+
+		<script>
+			// try to find a localstorage key  if it exists, use it
+			if (localStorage.getItem('LK-theme')) {
+				document.documentElement.setAttribute('data-theme', localStorage.getItem('LK-theme'));
+			}
+			// if no localstorage key exists, use the system preference
+			else {
+				if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+					document.documentElement.setAttribute('data-theme', 'dark');
+				} else {
+					document.documentElement.setAttribute('data-theme', 'light');
+				}
+			}
+		</script>
+		
+		<link href="../_app/immutable/assets/0.ae5d1ff1.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/defaultLayout.72d7a429.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Grid.e597423a.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.e89552f8.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.3a6d0e3c.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.5cb0a38d.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.3eba86e1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.a4192956.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.ae90eb3f.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.5120962f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.82cb330a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/utils.fe243f36.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/7.0a5285bc.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Grid.3d1991bc.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents" class="svelte">   <header style="--header-height: 4rem; --logo-scale: 0.8" class="svelte-a6bpi5"><a href="/LK-Blog-SvelteKit/" class="logo svelte-a6bpi5" aria-label="Home" title="Home"><svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -1 266 266"><path d="M 56 42 L 77 42 Q 80 42 80 45 L 80 192 Q 80 195 83 195 L 137 195 Q 140 195 142 197 L 165 220 C 166 221 165 222 164 222 L 56 222 C 54 222 53 221 53 219 L 53 45 C 53 43 54 42 56 42 L 56 42 Z" stroke="#000000" stroke-width="1" fill="#000000"></path><path d="M 86 130 L 172 44 C 173 43 175 42 177 42 L 210 42 C 211 42 212 43 211 44 C 211 44 211 44 211 44 L 125 130 C 124 131 124 133 125 134 L 211 220 C 212 221 211 222 210 222 C 210 222 210 222 210 222 L 177 222 C 174 222 174 222 171 220 L 86 134 C 85 133 85 131 86 130 Z" stroke="#000000" stroke-width="1" fill="#000000"></path><path d="M 132 264 C 59 264 0 205 0 132 C 0 59 59 0 132 0 C 205 0 264 59 264 132 C 264 205 205 264 132 264 Z M 132 258 C 201 258 258 201 258 132 C 258 63 202 6 132 6 C 63 6 6 62 6 132 C 6 201 62 258 132 258 Z" stroke="#000000" stroke-width="1" fill="#000000"></path></svg></a> <div class="title svelte-a6bpi5" data-svelte-h="svelte-dael48">LK.Blog</div> <nav class="nav-wrapper svelte-1egzb1o"><button class="nav-toggle shadow svelte-1egzb1o" aria-expanded="false" aria-haspopup="true" aria-label="Nav toggle">Articles</button>  </nav> </header> <main>   <h2 class="svelte-gd11pg">JavaScript</h2> <section class="card_wrapper svelte-gd11pg"><div class="card shadow svelte-vugzlm"><h3 class="card_title svelte-vugzlm"><a href="/LK-Blog-SvelteKit/All-about-Web-Development">All about Web Development</a></h3> <div class="card_meta svelte-vugzlm"><div class="card_date svelte-vugzlm">September 30, 2023</div> <div class="card_category svelte-vugzlm">in<a href="/LK-Blog-SvelteKit/c/Code"> Code</a></div> </div> <p class="card_content svelte-vugzlm">Web development is the art and science of creating websites and web applications that are accessible and functional on the internet. It encompasses a wide range of skills and technologies, making it a dynamic and constantly evolving field.</p>  <div class="card_image_wrapper svelte-vugzlm"><picture><source srcset="/LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.0d4f74a0.avif 400w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.97d5ec80.avif 600w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.ea477cd1.avif 900w" type="image/avif"><source srcset="/LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.33bb39ee.webp 400w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.c5aad164.webp 600w, /LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.a2c975ac.webp 900w" type="image/webp"> <img src="/LK-Blog-SvelteKit/_app/immutable/assets/Code-Title.a2c975ac.webp" loading="lazy" class="card_image svelte-1og64i1" decoding="async" draggable="false" width="900" height="505" alt=""></picture></div>  </div> </section></main> <footer class="svelte-1r6kx16"><span class="theme_toggle svelte-1r6kx16"><button class="theme-toggle-wrapper svelte-rhe2td" data-svelte-h="svelte-4goppp"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="2rem" height="2rem" fill="currentColor" stroke-linecap="round" class="sun_to_moon theme-toggle svelte-rhe2td" viewBox="0 0 32 32"><clipPath id="sun_to_moon__cutout"><path d="M0-5h30a1 1 0 0 0 9 13v24H0Z" class="svelte-rhe2td"></path></clipPath><g clip-path="url(#sun_to_moon__cutout)"><circle cx="16" cy="16" r="9.34"></circle><g stroke="currentColor" stroke-width="1.5"><path d="M16 5.5v-4" class="svelte-rhe2td"></path><path d="M16 30.5v-4" class="svelte-rhe2td"></path><path d="M1.5 16h4" class="svelte-rhe2td"></path><path d="M26.5 16h4" class="svelte-rhe2td"></path><path d="m23.4 8.6 2.8-2.8" class="svelte-rhe2td"></path><path d="m5.7 26.3 2.9-2.9" class="svelte-rhe2td"></path><path d="m5.8 5.8 2.8 2.8" class="svelte-rhe2td"></path><path d="m23.4 23.4 2.9 2.9" class="svelte-rhe2td"></path></g></g></svg> </button></span> <span data-svelte-h="svelte-14wg5gd">Footer</span>   </footer>  
+			
+			<script>
+				{
+					__sveltekit_1576t27 = {
+						assets: "/LK-Blog-SvelteKit",
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {"PUBLIC_ARTICLE_PATH":"/src/articles"}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.e89552f8.js"),
+						import("../_app/immutable/entry/app.3eba86e1.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 7],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

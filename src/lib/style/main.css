@@ -145,12 +145,12 @@ html {
 	/* width: 100vw; */
 	scrollbar-width: thin;
 	scroll-behavior: smooth;
-	/* scrollbar-gutter: stable; */
-	accent-color: rgb(var(--color-text) / 1);
+	scrollbar-gutter: stable;
+	accent-color: rgba(var(--color-text) / 1);
 	scrollbar-color: var(--color-link, initial) transparent;
-	box-shadow:
+	/* box-shadow:
 		inset 4px 2px 5px -5px var(--color-link),
-		inset -4px -2px 5px -5px var(--color-link);
+		inset -4px -2px 5px -5px var(--color-link); */
 	height: 100vh;
 }
 body {

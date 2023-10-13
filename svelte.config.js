@@ -1,10 +1,5 @@
 import adapter from '@sveltejs/adapter-static';
-// import adapter from '@sveltejs/adapter-auto';
-// import { importAssets } from 'svelte-preprocess-import-assets';
 import { vitePreprocess } from '@sveltejs/kit/vite';
-// import { imagetools } from 'vite-imagetools';
-// import sveltePreprocess from 'svelte-preprocess';
-// import { importAssets } from 'svelte-preprocess-import-assets';
 import { mdsvex } from 'mdsvex';
 import mdsvexConfig from './mdsvex.config.js';
 let dev = process.env.NODE_ENV === 'development';
@@ -16,24 +11,7 @@ if (process.env.NODE_DEV === 'development') {
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
-	// preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
-	preprocess: [
-		vitePreprocess(),
-		mdsvex(mdsvexConfig)
-		// importAssets()
-		// 	importAssets({
-		// 	sources: (defaultSources) => {
-		// 		return [
-		// 			...defaultSources,
-		// 			{
-		// 				tag: 'Image',
-		// 				srcAttributes: ['src']
-		// 			}
-		// 		];
-		// 	}
-		// }),
-		// sveltePreprocess()
-	],
+	preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
 	onwarn: (warning, handler) => {
 		if (warning.code.startsWith('a11y-')) {
 			return;
@@ -45,16 +23,11 @@ const config = {
 
 	kit: {
 		paths: {
-			base: dev ? '' : '/blog'
+			base: dev ? '' : '/LK-Blog-SvelteKit'
+			// base: dev ? '' : '/blog'
 		},
 		prerender: {
 			handleMissingId: 'ignore'
-			// 	handleHttpError: ({ path, referrer, message }) => {
-			// 		// if (path === '/Code') {
-			// 		// 	return;
-			// 		// }
-			// 		throw new Error(path, referrer, message);
-			// 	}
 		},
 
 		alias: {
@@ -73,10 +46,6 @@ const config = {
 			strict: true
 		})
 	}
-
-	// vite: {
-	// 	plugins: [imagetools({ force: true })]
-	// }
 };
 
 export default config;

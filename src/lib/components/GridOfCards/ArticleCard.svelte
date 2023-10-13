@@ -10,13 +10,7 @@
 	// function gotoArticle() {
 	// 	goto(`${base}/${meta.path}`);
 	// }
-	// console.log(JSON.stringify(meta, null, 2));
-	// const gallery = Object.values(
-	// 	import.meta.glob('../../../articles/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' })
-	// );
-	// $: console.log(gallery);
-	// const imagePath = meta.articlePath + meta.imagePath;
-	// console.log(imagePath);
+	console.log(meta);
 </script>
 
 <div class="card shadow">
@@ -39,7 +33,9 @@
 	<p class="card_content">{meta.excerpt}</p>
 	<!-- 		on:click={gotoArticle}
 		on:keypress={gotoArticle} -->
-	<Image path={'/src/articles' + meta.articlePath + meta.imagePath} />
+	<div class="card_image_wrapper">
+		<Image path={'/src/articles' + meta.articlePath + meta.imagePath} classes={'card_image'} />
+	</div>
 	<!-- <img class="card_image" src={meta.imageDesc} alt={meta.title} /> -->
 </div>
 
@@ -48,10 +44,10 @@
 		--img-height: 105px;
 		--img-ratio: 1;
 		/* --img-ratio: 0.618; */
-		--padding-outer: 0.5rem;
+		--card-padding-outer: 0.5rem;
 		border-radius: var(--radius-m);
 		background-color: var(--color-bg-sec);
-		padding-right: var(--padding-outer);
+		padding-right: var(--card-padding-outer);
 		display: grid;
 		height: var(--img-height);
 		grid-template-areas:
@@ -60,17 +56,19 @@
 			'image content';
 	}
 
-	.card_image {
+	.card_image_wrapper {
 		grid-area: image;
+	}
+	:global(.card_image) {
 		height: var(--img-height);
-		border-radius: 0.6rem;
-		/* border-top-left-radius: var(--radius-m); */
-		/* border-bottom-left-radius: var(--radius-m); */
+		--card-img-padding: 0.25rem;
+		border-top-left-radius: calc(var(--radius-s) + var(--card-img-padding));
+		border-bottom-left-radius: calc(var(--radius-s) + var(--card-img-padding));
 		aspect-ratio: 1 / var(--img-ratio);
 		object-fit: cover;
 		object-position: top left;
 		cursor: pointer;
-		padding: 0.5rem;
+		padding: var(--card-img-padding);
 	}
 
 	.card_title {
@@ -79,7 +77,7 @@
 		font-weight: bold;
 		line-height: 1.2;
 		margin: 0;
-		padding: var(--padding-outer) 0.5rem 0rem var(--padding-outer);
+		padding: var(--card-padding-outer) 0.5rem 0rem var(--card-padding-outer);
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
@@ -93,7 +91,7 @@
 		color: var(--color-text-sec);
 		flex-wrap: nowrap;
 		font-size: 0.8rem;
-		margin: 0.2rem var(--padding-outer) 0rem var(--padding-outer);
+		margin: 0.2rem var(--card-padding-outer) 0rem var(--card-padding-outer);
 	}
 	.card_date {
 		overflow: hidden;
@@ -121,7 +119,7 @@
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 2;
-		margin: 0.2rem var(--padding-outer) var(--padding-outer) var(--padding-outer);
+		margin: 0.2rem var(--card-padding-outer) var(--card-padding-outer) var(--card-padding-outer);
 		padding: 0;
 	}
 

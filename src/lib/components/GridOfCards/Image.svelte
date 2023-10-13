@@ -1,30 +1,48 @@
 <script lang="ts">
-	// import src from '/src/articles/Code/Laravel/Laravel-Title.png?w=2048;500&invert';
-	// import src from '/src/articles/Code/Laravel/Laravel-Title.png';
+	// the honor of this code goes to
+	// https://github.com/sveltejs/kit/issues/241#issuecomment-1596383596
 	export let path: string;
-	console.log('\n\npath', path);
-	export const alt: string = 'image';
+	export let alt: string = '';
+	export let draggable: boolean = false;
+	export let decoding: 'async' | 'sync' | 'auto' = 'async';
+	export let loading: 'lazy' | 'eager' = 'lazy';
+	export let classes: string = '';
+	export let width: number = 0;
 
-	// const gallery = Object.values(
-	// 	import.meta.glob('../../../articles/*.{png,jpg,jpeg,PNG,JPEG}', { eager: true, as: 'url' })
-	// );
+	interface Picture {
+		sources: {
+			avif: {
+				src: string;
+				w: number;
+			}[];
+			webp: {
+				src: string;
+				w: number;
+			}[];
+		};
+		img: {
+			src: string;
+			w: number;
+			h: number;
+		};
+	}
 
-	const allImages = import.meta.glob('/src/articles/**/*.{png,jpg,jpeg,PNG,JPEG}', {
-		// query: { width: '100,200,300', format: 'webp' },
-		query: { w: '400;600;900' },
-		eager: true
-		// as: 'url'
-	});
+	const allImages: Record<string, Picture> = import.meta.glob(
+		'/src/articles/**/*.{png,jpg,jpeg,PNG,JPEG}',
+		{
+			query: { w: '400;600;900' },
+			eager: true
+		}
+	);
+
+	const src: Picture = allImages[path];
+
+	if (!width) {
+		width = src.img.w;
+	}
+
+	// $: console.log('SRC', src);
 	// console.log('allImages', JSON.stringify(allImages, null, 2));
-	// path = '/src/articles/Code/Laravel/Laravel-Title.png';
-	const src = allImages[path];
-	// const src = allImages['/src/articles/Code/Laravel/Laravel-Title.png'];
-	$: console.log('SRC', src);
-
-	// Object.entries(src.sources).forEach((element) => {
-	// 	console.log(element);
-	// });
-
 	// console.log('src', JSON.stringify(src, null, 2));
 </script>
 
@@ -33,20 +51,21 @@
 		<source srcset={images.map((i) => `${i.src} ${i.w}w`).join(', ')} type={'image/' + format} />
 	{/each}
 
-	<img src={src.img.src} width={src.img.w} height={src.img.h} />
+	<!-- class={classes} -->
+	<img
+		src={src.img.src}
+		{loading}
+		class={classes}
+		{decoding}
+		{draggable}
+		{width}
+		height={src.img.h}
+		{alt}
+	/>
 </picture>
 
 <style>
 	img {
-		grid-area: image;
-		height: var(--img-height);
-		border-radius: 0.6rem;
-		/* border-top-left-radius: var(--radius-m); */
-		/* border-bottom-left-radius: var(--radius-m); */
-		aspect-ratio: 1 / var(--img-ratio);
-		object-fit: cover;
-		object-position: top left;
-		cursor: pointer;
-		padding: 0.5rem;
+		width: 100%;
 	}
 </style>

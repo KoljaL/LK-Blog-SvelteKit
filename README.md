@@ -110,6 +110,7 @@ export type ArticleMetaSorted = {
 - [Nice Svelte Starter with many components](https://github.com/the-pudding/svelte-starter/tree/main)
 - [simple Blog](https://www.josean.com/posts/yabai-setup)
 - [simple Blog](https://svhighlight.vercel.app/)
+- [Colophon • Sidney Alcantara](https://sidney.me/colophon)
 - [component Docs](https://mono-doc.vercel.app/1-Motivation)
 - [josh-collinsworth/sveltekit-blog-starter](https://github.com/josh-collinsworth/sveltekit-blog-starter)
 - [MDSvex and Svelte Kit](https://www.furudean.com/blog/svelte-kit-mdsvex)

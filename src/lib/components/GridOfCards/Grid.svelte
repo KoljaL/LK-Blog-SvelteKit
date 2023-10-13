@@ -2,33 +2,18 @@
 	import type { ArticleMetaData, ArticleMetaSorted, ArticlesMetaData, GridSort } from '$types';
 	import { page } from '$app/stores';
 	import { sortedByDate, sortedByTags, sortedByCategory } from './gridFunctions';
-	import ArticleCard from '$lib/components/GridOfCards/ArticleCard.svelte';
+	import ArticleCard from './ArticleCard.svelte';
+
 	export const sortBy: GridSort = 'Recent';
 
-	let ArticlesMetadata: ArticlesMetaData = $page.data.ArticlesMeta;
+	let ArticlesMetadata: ArticlesMetaData = $page.data.articlesMeta;
 	let tagFilter: string = $page.params.tag || '';
 	let catFilter: string = $page.params.category || '';
 	let sortedArticles: ArticleMetaSorted[] = [];
 
-	// const images = import.meta.glob('/src/articles/**/*.png', {
-	// 	query: { width: '100,200,300' },
-	// 	eager: true
-	// });
-	// console.log(images);
-
-	// const IMG = images['/src/articles/Code/Laravel/Laravel-Title.png'].default;
-
-	// images.forEach((element) => {
-	// 	console.log(element);
-	// });
-
-	// return {
-	// 	image: images[`../example/path/${myVar}.png`]?.default || null
-	// };
-
 	$: if (catFilter == '') {
 		try {
-			catFilter = $page.data.ArticleMeta.category;
+			catFilter = $page.data.articleMeta.category;
 		} catch (error) {
 			catFilter = '';
 		}
@@ -36,11 +21,11 @@
 
 	$: if (tagFilter == '') {
 		try {
-			tagFilter = $page.data.ArticleMeta.tags;
+			tagFilter = $page.data.articleMeta.tags;
 		} catch (error) {
 			tagFilter = '';
 		}
-		// tagFilter = $page.data.ArticleMeta.tags;
+		// tagFilter = $page.data.articleMeta.tags;
 	}
 
 	$: {

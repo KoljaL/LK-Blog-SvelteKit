@@ -1,23 +1,23 @@
 <script lang="ts">
-	import { formatDate } from '$lib/functions/utils';
 	import type { ArticleMetaData } from '$types';
+	import { formatDate } from '$lib/functions/utils';
 	import { base } from '$app/paths';
 	// import TagLinks from '$lib/components/TagLinks.svelte';
 	import { goto } from '$app/navigation';
-	export let meta: ArticleMetaData;
 	import Image from './Image.svelte';
 
+	export let meta: ArticleMetaData;
 	// function gotoArticle() {
 	// 	goto(`${base}/${meta.path}`);
 	// }
-	console.log(meta);
+	// console.log(meta);
 </script>
 
 <div class="card shadow">
 	<h3 class="card_title">
-		<!-- <a href="{base}/{meta.articleSlug}"> -->
-		{meta.title}
-		<!-- </a> -->
+		<a href="{base}/{meta.articleSlug}">
+			{meta.title}
+		</a>
 	</h3>
 	<div class="card_meta">
 		<div class="card_date">
@@ -134,7 +134,7 @@
 			height: calc(var(--img-height) * calc(1 / var(--img-ratio)));
 		}
 
-		.card:first-of-type .card_image {
+		.card:first-of-type :global(.card_image) {
 			height: calc(var(--img-height) * calc(1 / var(--img-ratio)));
 		}
 

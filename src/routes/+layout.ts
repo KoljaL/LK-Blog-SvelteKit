@@ -9,8 +9,8 @@ interface Post {
 }
 
 export async function load() {
-	const ArticlesMeta: ArticlesMetaData = await getArticlesMeta();
-	return { ArticlesMeta };
+	const articlesMeta: ArticlesMetaData = await getArticlesMeta();
+	return { articlesMeta };
 }
 
 /**

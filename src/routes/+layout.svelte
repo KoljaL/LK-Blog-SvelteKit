@@ -3,8 +3,9 @@
 	import '@fontsource/overpass/200.css';
 	import '@fontsource/overpass/400.css';
 	import '@fontsource/jetbrains-mono';
+	// import '$lib/style/gfm.css';
 	import '$lib/style/main.css';
-	// import Header from '$lib/layout/Header.svelte';
+	import Header from '$lib/layout/Header.svelte';
 	import Footer from '$lib/layout/Footer.svelte';
 	// import DebugBar from '$lib/components/Debug/DebugBar.svelte';
 	import { afterNavigate } from '$app/navigation';
@@ -15,7 +16,7 @@
 	});
 </script>
 
-<!-- <Header /> -->
+<Header />
 <main>
 	<slot />
 </main>

@@ -1,58 +1,38 @@
 <script context="module">
-	// export let absPath;
-
-	// // console.log('absPath', absPath);
-
-	// export async function load() {
-	// 	return { data: metadata };
-	// }
+	// the generated keys ftrom ArticleMetaData are mot in the frontmatter
+	// so we have to get them from the $page store
+	// the store is empty in the component, so we have to get them in the module
+	import { page } from '$app/stores';
+	const contextPage = page;
 </script>
 
 <script lang="ts">
 	// @ts-nocheck
-	// import { imagetools } from 'vite-imagetools';
-	import { base } from '$app/paths';
-	import { formatDate } from '$lib/functions';
-	import GridOfCards from '$lib/components/GridOfCards/Grid.svelte';
-	import TagLinks from '$lib/components/TagLinks.svelte';
 	import { onMount } from 'svelte';
-	import { get } from 'svelte/store';
+	import { base } from '$app/paths';
+	import { formatDate } from '$lib/functions/utils';
+	import TagLinks from '$lib/components/TagLinks.svelte';
+	import Image from '$lib/components/GridOfCards/Image.svelte';
+	import GridOfCards from '$lib/components/GridOfCards/Grid.svelte';
+
 	export let title;
-	export let date;
-	export let description;
-	export let category;
 	export let tags;
-	export let imagePath = '';
-	// export let absPath;
-	// console.log('absPath', absPath);
+	export let imagePath;
+	export let created;
 	// console.log('$$restProps', { ...$$restProps });
 
-	// export let coverImageUrl;
-	// export let thumbnail = '';
-	// export let TITLEIMAGE = '';
+	const category = $contextPage.data.articleMeta.category;
+	const articlePath = $contextPage.data.articleMeta.articlePath;
+	const headerImagePath = '/src/articles' + articlePath + imagePath;
 
-	// $: console.log('imagePath', imagePath);
-	// $: console.log('img', img);
-	const img = getTitleImage(imagePath);
-
-	async function getTitleImage(path) {
-		if (!path) return null;
-		// console.log('path', path);
-		const imageFiles = import.meta.glob('/src/articles/**/*.jpg');
-		// console.log('imageFiles', imageFiles);
-		const img = await imageFiles[path]();
-		// console.log('img', img);
-		return img;
-	}
-
-	let showText = 'Category';
+	let sortedBy = 'Category';
 	let showButtonText = 'Tag';
 	function changeShow() {
-		if (showText === 'Category') {
-			showText = 'Tag';
+		if (sortedBy === 'Category') {
+			sortedBy = 'Tag';
 			showButtonText = 'Category';
 		} else {
-			showText = 'Category';
+			sortedBy = 'Category';
 			showButtonText = 'Tag';
 		}
 	}
@@ -89,17 +69,15 @@
 	}
 </script>
 
-{#await img then c}
-	{#if c}
-		<img src={c.default} alt={description} />
-	{/if}
-{/await}
+<div class="headerImage">
+	<Image path={headerImagePath} />
+</div>
 
 <hgroup>
 	<h1>{title}</h1>
 	<div class="subheader">
 		<date class="date">
-			{formatDate(date)}
+			{formatDate(created)}
 			<span> in </span>
 			<a href="{base}/c/{category}">{category}</a>
 		</date>
@@ -118,7 +96,7 @@
 	<!-- // to-do extend the GridOfCards component to accept multiple tags -->
 	<!-- <button class="shadow" on:click={changeShow}>{showButtonText}</button> -->
 </div>
-<GridOfCards show={showText} />
+<GridOfCards {sortedBy} />
 
 <style>
 	hgroup {
@@ -143,7 +121,7 @@
 		font-size: 0.9rem;
 	}
 
-	img {
+	.headerImage :global(img) {
 		width: 100%;
 		height: auto;
 		margin-top: 0.75rem;

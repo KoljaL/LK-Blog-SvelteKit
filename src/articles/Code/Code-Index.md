@@ -1,6 +1,6 @@
 ---
 published: true
-layout: Code
+layout: default
 title: All about Web Development
 tags: Code, PHP, Laravel, Svelte, SvelteKit, JavaScript 
 description: Web development is the art and science of creating websites and web applications that are accessible and functional on the internet. 

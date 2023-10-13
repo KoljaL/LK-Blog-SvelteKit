@@ -54,7 +54,7 @@ export function sortedByCategory(articles: ArticlesMetaData) {
 	const catMap = new Map();
 
 	sortByDate(articles).forEach((article) => {
-		console.log('article.category', article.category);
+		// console.log('article.category', article.category);
 		const cat = article.category;
 		if (!catMap.has(cat)) {
 			catMap.set(cat, []);

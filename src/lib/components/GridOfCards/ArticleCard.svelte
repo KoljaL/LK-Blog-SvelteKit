@@ -2,7 +2,7 @@
 	import type { ArticleMetaData } from '$types';
 	import { formatDate } from '$lib/functions/utils';
 	import { base } from '$app/paths';
-	// import TagLinks from '$lib/components/TagLinks.svelte';
+	import TagLinks from '$lib/components/TagLinks.svelte';
 	import { goto } from '$app/navigation';
 	import Image from './Image.svelte';
 
@@ -24,11 +24,11 @@
 			{formatDate(meta.created)}
 		</div>
 		<div class="card_category">
-			<!-- in<a href="{base}/c/{meta.category}">&nbsp;{meta.category}</a> -->
+			in<a href="{base}/c/{meta.category}">&nbsp;{meta.category}</a>
 		</div>
-		<div class="card_tags">
-			<!-- <TagLinks tags={meta.tags} /> -->
-		</div>
+		<!-- <div class="card_tags">
+			<TagLinks tags={meta.tags} />
+		</div> -->
 	</div>
 	<p class="card_content">{meta.excerpt}</p>
 	<!-- 		on:click={gotoArticle}
@@ -103,12 +103,12 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
-	.card_tags {
+	/* .card_tags {
 		display: none;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-	}
+	} */
 	.card_content {
 		grid-area: content;
 		overflow: hidden;

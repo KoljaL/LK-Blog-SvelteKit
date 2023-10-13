@@ -9,6 +9,7 @@
 	export let classes: string = '';
 	export let width: number = 0;
 
+	let imageFound = true;
 	interface Picture {
 		sources: {
 			avif: {
@@ -37,6 +38,12 @@
 
 	const src: Picture = allImages[path];
 
+	if (!src) {
+		// console.log('NF', path);
+		// console.log('allImages', allImages);
+		imageFound = false;
+	}
+
 	if (!width) {
 		width = src.img.w;
 	}
@@ -44,25 +51,27 @@
 	// $: console.log('SRC', src);
 	// console.log('allImages', JSON.stringify(allImages, null, 2));
 	// console.log('src', JSON.stringify(src, null, 2));
+	// console.log('src', JSON.stringify(path, null, 2));
 </script>
 
-<picture>
-	{#each Object.entries(src.sources) as [format, images]}
-		<source srcset={images.map((i) => `${i.src} ${i.w}w`).join(', ')} type={'image/' + format} />
-	{/each}
+{#if imageFound}
+	<picture>
+		{#each Object.entries(src.sources) as [format, images]}
+			<source srcset={images.map((i) => `${i.src} ${i.w}w`).join(', ')} type={'image/' + format} />
+		{/each}
 
-	<!-- class={classes} -->
-	<img
-		src={src.img.src}
-		{loading}
-		class={classes}
-		{decoding}
-		{draggable}
-		{width}
-		height={src.img.h}
-		{alt}
-	/>
-</picture>
+		<img
+			src={src.img.src}
+			{loading}
+			class={classes}
+			{decoding}
+			{draggable}
+			{width}
+			height={src.img.h}
+			{alt}
+		/>
+	</picture>
+{/if}
 
 <style>
 	img {

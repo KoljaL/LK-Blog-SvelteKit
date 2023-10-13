@@ -47,14 +47,15 @@ const config = {
 		paths: {
 			base: dev ? '' : '/blog'
 		},
-		// prerender: {
-		// 	handleHttpError: ({ path, referrer, message }) => {
-		// 		// if (path === '/Code') {
-		// 		// 	return;
-		// 		// }
-		// 		throw new Error(path, referrer, message);
-		// 	}
-		// },
+		prerender: {
+			handleMissingId: 'ignore'
+			// 	handleHttpError: ({ path, referrer, message }) => {
+			// 		// if (path === '/Code') {
+			// 		// 	return;
+			// 		// }
+			// 		throw new Error(path, referrer, message);
+			// 	}
+		},
 
 		alias: {
 			$components: './src/components',

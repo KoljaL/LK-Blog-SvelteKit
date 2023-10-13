@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { GridSort } from '$types';
 	import GridOfCards from '$lib/components/GridOfCards/Grid.svelte';
-	// import Quotes from '$lib/components/Quotes.svelte';
+	import Quotes from '$lib/components/Quotes.svelte';
 	import { balancer } from '$lib/functions/balancer';
-	let sortBy: GridSort = 'Recent';
-
+	let sortBy: GridSort = 'Category';
+	// $: sortBy = sortBy;
 	// export let data;
 	// console.log(JSON.stringify(data, null, 2));
 </script>
@@ -13,7 +13,7 @@
 	Just another blog, made with SvelteKit for my personal use or for anyone who wants to use it.
 </h1>
 
-<!-- <Quotes /> -->
+<Quotes />
 
 Click the button below to sortBy articles by year and month or by tag.
 

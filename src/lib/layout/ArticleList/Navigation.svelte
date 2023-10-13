@@ -15,7 +15,7 @@
 	$: articlesMeta = $page.data.articlesMeta as ArticlesMetaData;
 	$: articleSlug = $page.params.article;
 	// $: console.log(articlesMeta);
-	console.log($page.data);
+	// console.log($page.data);
 
 	afterNavigate(() => {
 		expanded = false;

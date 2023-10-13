@@ -1,6 +1,6 @@
 ---
 published: true
-layout: Code
+layout: default
 title: HTML the language of the web
 tags: Code, HTML, Web Development, Internet
 description: HTML is the language of the web. 

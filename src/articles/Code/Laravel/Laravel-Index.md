@@ -1,6 +1,6 @@
 ---
 published: true
-layout: Code
+layout: default
 title: Laravel Web Development for Beginners
 tags: Code, PHP, Laravel
 description: Laravel is a web application framework with expressive, elegant syntax.  

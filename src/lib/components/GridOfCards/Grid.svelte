@@ -4,7 +4,7 @@
 	import { sortedByDate, sortedByTags, sortedByCategory } from './gridFunctions';
 	import ArticleCard from './ArticleCard.svelte';
 
-	export const sortBy: GridSort = 'Recent';
+	export let sortBy: GridSort = 'Recent';
 
 	let ArticlesMetadata: ArticlesMetaData = $page.data.articlesMeta;
 	let tagFilter: string = $page.params.tag || '';
